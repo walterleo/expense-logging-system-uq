@@ -1,0 +1,404 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Expense loggin system",
+      "description": "This is an api of a practice for a simple expense loggin system",
+      "version": "1.0"
+    },
+    "produces": ["application/json"],
+    "host": "localhost:3000",
+    "basePath": "",
+    "tags": [
+        {
+            "name": "category",
+            "description": "CRUD for manage categories"
+        },
+        {
+            "name": "expense",
+            "description": "CRUD for manage expenses"
+        }
+    ],
+    "paths": {
+        "/categories/": {
+            "get": {
+                "tags": [
+                    "category"
+                ],
+                "summary": "Get list categories",
+                "description": "Get Categories by filters and order",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit of query",
+                        "type": "number"
+                        
+                    },
+                    {
+                        "in": "query",
+                        "name": "skip",
+                        "description": "Skip in query",
+                        "type": "number"
+                        
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortBy",
+                        "description": "Field for sort the find",
+                        "schema": {
+                            "$ref": "#/definitions/sortByQuery"
+                        }
+                        
+                    },
+                    {
+                        "in": "query",
+                        "name": "filters",
+                        "description": "Object with filters for fields",
+                        "type": "object"
+                        
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List Successfully",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Category"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "category"
+                ],
+                "summary": "Create a new category",
+                "description": "Create a new category",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Category object that needs to be create",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Category"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created Successfully"
+                    }
+                }
+            }
+        },
+        "/categories/{id}": {
+            "put": {
+                "tags": [
+                    "category"
+                ],
+                "summary": "Update a category by id",
+                "description": "Update a category by id",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Category object for replace the actual",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Category"
+                        } 
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of category for replace",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Updated Successfully"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                  "category"
+                ],
+                "summary": "Delete a category by ID",
+                "description": "Delete a category and delete all expenses related it",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                      "name": "id",
+                      "in": "path",
+                      "description": "id of category to delete",
+                      "required": true,
+                      "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                      "description": "Deleted Successfully"
+                    }
+                }
+            }
+        },
+        "/expenses/": {
+            "get": {
+                "tags": [
+                    "expense"
+                ],
+                "summary": "Get list expenses",
+                "description": "Get expenses by filters and order",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit of query",
+                        "type": "number"
+                        
+                    },
+                    {
+                        "in": "query",
+                        "name": "skip",
+                        "description": "Skip in query",
+                        "type": "number"
+                        
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortBy",
+                        "description": "Field for sort the find",
+                        "schema": {
+                            "$ref": "#/definitions/sortByQuery"
+                        }
+                        
+                    },
+                    {
+                        "in": "query",
+                        "name": "filters",
+                        "description": "Object with filters for fields",
+                        "type": "object"
+                        
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List Successfully",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Expense"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "expense"
+                ],
+                "summary": "Create a new expense",
+                "description": "Create a new expense",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Expense object that needs to be create",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Expense"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created Successfully"
+                    }
+                }
+            }
+        },
+        "/expenses/{id}": {
+            "put": {
+                "tags": [
+                    "expense"
+                ],
+                "summary": "Update an expense by ID",
+                "description": "Update an expense by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Category object for replace the actual",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Expense"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of expense for replace",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Updated Successfully"
+                    }
+                }
+
+            },
+            "delete": {
+                "tags": [
+                    "expense"
+                ],
+                "summary": "Delete an expense by ID",
+                "description": "Delete an expense by ID",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of expense to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Deleted Successfully"
+                    }
+                }
+            }
+        },
+        "/expenses/by-categories": {
+            "get": {
+                "tags": [
+                    "expense"
+                ],
+                "summary": "Route for get the spends by category",
+                "description": "Route get the name of categories and its spend",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Expenses by category get successfully",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "category2"
+                                    },
+                                    "totalspend": {
+                                        "type": "number",
+                                        "example": "50"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    },
+    "definitions": {
+        "Category": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "example": "Category 1"
+                }
+            }
+        },
+        "Expense": {
+            "type": "object",
+            "required": [
+                "amount",
+                "category_id"
+            ],
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "example": "Expense 1"
+                },
+                "amount": {
+                    "type": "number",
+                    "example": 50
+                },
+                "category_id": {
+                    "type": "string",
+                    "example": "60288ba366902a01bc31ef63"
+                }
+            }
+        },
+        "sortByQuery": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    
+                    "colId": {
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "sort": {
+                        "type": "string",
+                        "enum": ["asc", "desc"]
+                    }
+                    
+                }
+            }
+                        
+        }
+    }
+ }
