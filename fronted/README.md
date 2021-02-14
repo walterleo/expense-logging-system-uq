@@ -1,4 +1,4 @@
-# fronted-vue-2
+# fronted
 
 ## Project setup
 ```
