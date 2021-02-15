@@ -1,4 +1,17 @@
+// base.functions.ts
+/**
+ * This is the doc comment for base.functions.ts
+ * @packageDocumentation
+ * @module baseFunctions
+ */
+
 const moment = require('moment');
+
+/**
+ * Function to get the string of field sort correct to find in the database
+ * @param sortBy Array with an object with colId and sort properties
+ * @returns The field string for sort
+ */
 
 function getFieldSort(sortBy) {
   let fieldSort = '';
@@ -10,6 +23,12 @@ function getFieldSort(sortBy) {
 
   return fieldSort;
 }
+
+/**
+ * Function to create the query for find a field
+ * @param objectField Object with the instructions for find in a field
+ * @returns The query for find the field
+ */
 
 function getObjectFind(objectField) {
   let objectFind = {};
@@ -130,8 +149,15 @@ function getObjectFind(objectField) {
   return objectFind;
 }
 
+/**
+ * Function get the find query complete for find in the database, use the function
+ * getObjectFind for find the query for each field
+ * @param filters Object with the instructions for find of all fields
+ * @returns The query complete for find in the database
+ */
+
 function getFiltersForQueryFind(filters) {
-  const objectFiltersField = {};
+  const objectFiltersField: any = {};
 
   Object.keys(filters).forEach((field) => {
     const objectField = filters[field];

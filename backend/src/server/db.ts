@@ -1,3 +1,10 @@
+// db.ts
+/**
+ * This is the doc comment for db.ts
+ * @packageDocumentation
+ * @module db
+ */
+
 import mongoose = require('mongoose');
 import { config } from '../config/config';
 
@@ -8,6 +15,9 @@ const USER = encodeURIComponent(config.dbUser);
 const PASSWORD = encodeURIComponent(config.dbPassword);
 const PORT = encodeURIComponent(config.dbPort);
 
+/**
+ * Function for connect the api with the database mongo
+ */
 async function connect() {
   const AUTH = USER && PASSWORD ? `${USER}:${PASSWORD}@` : '';
   const url = `mongodb://${AUTH}${config.dbHost}:${PORT}/${config.dbName}`;

@@ -7,7 +7,8 @@
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts",
     "prod": "tsc && node ./dist/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typedoc": "typedoc --options typedoc.json"
   },
   "author": "Walter Meza",
   "license": "ISC",
@@ -33,6 +34,7 @@
     "moment": "^2.29.1",
     "mongoose": "^5.11.16",
     "mongoose-id-validator": "^0.6.0",
-    "swagger-ui-express": "^4.1.6"
+    "swagger-ui-express": "^4.1.6",
+    "typedoc": "^0.20.24"
   }
 }

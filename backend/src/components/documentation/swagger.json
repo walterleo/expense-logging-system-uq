@@ -364,7 +364,7 @@
             "type": "object",
             "required": [
                 "amount",
-                "category_id"
+                "categoryId"
             ],
             "properties": {
                 "description": {
@@ -375,7 +375,7 @@
                     "type": "number",
                     "example": 50
                 },
-                "category_id": {
+                "categoryId": {
                     "type": "string",
                     "example": "60288ba366902a01bc31ef63"
                 }
