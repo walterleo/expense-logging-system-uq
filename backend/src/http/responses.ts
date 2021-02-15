@@ -31,7 +31,7 @@ function success(req: Request, res: Response, data: unknown,
   }
 
   res.status(statusCode).send({
-    statusCode: statusCode,
+    statusCode,
     error: '',
     // @ts-ignore
     data: data || statusMessages[statusCode],

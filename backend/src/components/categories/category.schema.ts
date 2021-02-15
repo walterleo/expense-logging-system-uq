@@ -5,7 +5,7 @@ const categoryMongoSchema = new Schema({
     type: String,
     require: true,
   },
-});
+}, { timestamps: true });
 
 categoryMongoSchema.set('toJSON', {
   virtuals: true,
