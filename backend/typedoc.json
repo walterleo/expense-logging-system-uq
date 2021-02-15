@@ -1,0 +1,4 @@
+{
+    "entryPoints": ["./src/app.ts", "./src/http/controller/base.controller.ts"],
+    "out": "doc"
+}

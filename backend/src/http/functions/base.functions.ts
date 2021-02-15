@@ -131,7 +131,7 @@ function getObjectFind(objectField) {
 }
 
 function getFiltersForQueryFind(filters) {
-  const objectFiltersField = {};
+  const objectFiltersField: any = {};
 
   Object.keys(filters).forEach((field) => {
     const objectField = filters[field];

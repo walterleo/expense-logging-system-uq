@@ -1,7 +1,18 @@
+// file1.ts
+/**
+ * This is the doc comment for file1.ts
+ * @packageDocumentation
+ * @module my-module
+ */
+
 import { Request } from 'express';
 import BaseService from '../service/base.service';
 
 import * as baseFunctions from '../functions/base.functions';
+
+/**
+ * This comment _supports_ [Markdown](https://marked.js.org/)
+ */
 
 abstract class BaseController<T> {
     protected service: BaseService<T>;
