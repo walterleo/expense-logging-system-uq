@@ -55,10 +55,10 @@
 					<a href="../modules.html">expense-logging-system-uq</a>
 				</li>
 				<li>
-					<a href="../modules/my_module.html">my-module</a>
+					<a href="../modules/basecontroller.html">baseController</a>
 				</li>
 				<li>
-					<a href="my_module.basecontroller.html">BaseController</a>
+					<a href="basecontroller.basecontroller-1.html">BaseController</a>
 				</li>
 			</ul>
 			<h1>Class BaseController&lt;T&gt;</h1>
@@ -71,7 +71,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>This comment <em>supports</em> <a href="https://marked.js.org/">Markdown</a></p>
+						<p>This is the class base for controllers components with methods that communicate
+						with routes modules</p>
 					</div>
 				</div>
 			</section>
@@ -88,6 +89,14 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<span class="target">BaseController</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="categorycontroller.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>
+							</li>
+							<li>
+								<a href="expensecontroller.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -98,22 +107,22 @@
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected"><a href="my_module.basecontroller.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected"><a href="basecontroller.basecontroller-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="my_module.basecontroller.html#service" class="tsd-kind-icon">service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="basecontroller.basecontroller-1.html#service" class="tsd-kind-icon">service</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="my_module.basecontroller.html#createonehandler" class="tsd-kind-icon">create<wbr>One<wbr>Handler</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="my_module.basecontroller.html#deleteonehandler" class="tsd-kind-icon">delete<wbr>One<wbr>Handler</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="my_module.basecontroller.html#getallhandler" class="tsd-kind-icon">get<wbr>All<wbr>Handler</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="my_module.basecontroller.html#updateonehandler" class="tsd-kind-icon">update<wbr>One<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basecontroller.basecontroller-1.html#createonehandler" class="tsd-kind-icon">create<wbr>One<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basecontroller.basecontroller-1.html#deleteonehandler" class="tsd-kind-icon">delete<wbr>One<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basecontroller.basecontroller-1.html#getallhandler" class="tsd-kind-icon">get<wbr>All<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basecontroller.basecontroller-1.html#updateonehandler" class="tsd-kind-icon">update<wbr>One<wbr>Handler</a></li>
 							</ul>
 						</section>
 					</div>
@@ -125,15 +134,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Controller&lt;T&gt;<span class="tsd-signature-symbol">(</span>service<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BaseService</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="my_module.basecontroller.html" class="tsd-signature-type" data-tsd-kind="Class">BaseController</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Controller&lt;T&gt;<span class="tsd-signature-symbol">(</span>service<span class="tsd-signature-symbol">: </span><a href="baseservice.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="basecontroller.basecontroller-1.html" class="tsd-signature-type" data-tsd-kind="Class">BaseController</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/4f1f2da/backend/src/http/controller/base.controller.ts#L18">http/controller/base.controller.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/f7576df/backend/src/http/controller/base.controller.ts#L20">http/controller/base.controller.ts:20</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructor of baseController</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -143,10 +157,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>service: <span class="tsd-signature-type">BaseService</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>service: <a href="baseservice.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Is the service base with communicate methods in this controller</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="my_module.basecontroller.html" class="tsd-signature-type" data-tsd-kind="Class">BaseController</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="basecontroller.basecontroller-1.html" class="tsd-signature-type" data-tsd-kind="Class">BaseController</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -156,10 +173,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="service" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> service</h3>
-					<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BaseService</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <a href="baseservice.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/4f1f2da/backend/src/http/controller/base.controller.ts#L18">http/controller/base.controller.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/f7576df/backend/src/http/controller/base.controller.ts#L20">http/controller/base.controller.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -176,16 +193,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/4f1f2da/backend/src/http/controller/base.controller.ts#L38">http/controller/base.controller.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/f7576df/backend/src/http/controller/base.controller.ts#L60">http/controller/base.controller.ts:60</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Method for send to the service all parameters needed from the route to the service
+									for create one document</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>req: <span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request of the route</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Return a promises that resolve the document created</p>
 						</li>
 					</ul>
 				</section>
@@ -199,16 +226,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/4f1f2da/backend/src/http/controller/base.controller.ts#L50">http/controller/base.controller.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/f7576df/backend/src/http/controller/base.controller.ts#L86">http/controller/base.controller.ts:86</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Method for send to the service all parameters needed from the route to the service
+									for delete one document</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>req: <span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request of the route</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Return a promise with the response of the delete proccess</p>
 						</li>
 					</ul>
 				</section>
@@ -216,22 +253,32 @@
 					<a name="getallhandler" class="tsd-anchor"></a>
 					<h3>get<wbr>All<wbr>Handler</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Handler<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Handler<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestExtInterface</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/4f1f2da/backend/src/http/controller/base.controller.ts#L24">http/controller/base.controller.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/f7576df/backend/src/http/controller/base.controller.ts#L38">http/controller/base.controller.ts:38</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Method for send to the service all parameters needed from the route req for get
+									many documents</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>req: <span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>req: <span class="tsd-signature-type">RequestExtInterface</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request of the route</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Return a promise that resolve the list of documents and the quantity</p>
 						</li>
 					</ul>
 				</section>
@@ -239,22 +286,32 @@
 					<a name="updateonehandler" class="tsd-anchor"></a>
 					<h3>update<wbr>One<wbr>Handler</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>One<wbr>Handler<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>One<wbr>Handler<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/4f1f2da/backend/src/http/controller/base.controller.ts#L43">http/controller/base.controller.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/walterleo/expense-logging-system-uq/blob/f7576df/backend/src/http/controller/base.controller.ts#L72">http/controller/base.controller.ts:72</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Method for send to the service all parameters needed from the route to the service
+									for update one document</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>req: <span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request of the route</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Return a promises that resolve the document updated</p>
 						</li>
 					</ul>
 				</section>
@@ -266,8 +323,53 @@
 					<li class=" ">
 						<a href="../modules.html">Modules</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/categoryrepository.html">Category<wbr>Repository</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/expenserepository.html">Expense<wbr>Repository</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/app.html">app</a>
+					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/my_module.html">my-<wbr>module</a>
+						<a href="../modules/basecontroller.html">base<wbr>Controller</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/basefunctions.html">base<wbr>Functions</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/baserepository.html">base<wbr>Repository</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/baseservice.html">base<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/categorycontroller.html">category<wbr>Controller</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/categoryservice.html">category<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/db.html">db</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/errormiddleware.html">error<wbr>Middleware</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/expensecontroller.html">expense<wbr>Controller</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/expenseservice.html">expense<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/notfoundmiddleware.html">not<wbr>Found<wbr>Middleware</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/response.html">response</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/sharedmiddleware.html">shared<wbr>Middleware</a>
 					</li>
 				</ul>
 			</nav>
@@ -276,25 +378,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="my_module.basecontroller.html" class="tsd-kind-icon">Base<wbr>Controller</a>
+						<a href="basecontroller.basecontroller-1.html" class="tsd-kind-icon">Base<wbr>Controller</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected">
-								<a href="my_module.basecontroller.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="basecontroller.basecontroller-1.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="my_module.basecontroller.html#service" class="tsd-kind-icon">service</a>
+								<a href="basecontroller.basecontroller-1.html#service" class="tsd-kind-icon">service</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="my_module.basecontroller.html#createonehandler" class="tsd-kind-icon">create<wbr>One<wbr>Handler</a>
+								<a href="basecontroller.basecontroller-1.html#createonehandler" class="tsd-kind-icon">create<wbr>One<wbr>Handler</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="my_module.basecontroller.html#deleteonehandler" class="tsd-kind-icon">delete<wbr>One<wbr>Handler</a>
+								<a href="basecontroller.basecontroller-1.html#deleteonehandler" class="tsd-kind-icon">delete<wbr>One<wbr>Handler</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="my_module.basecontroller.html#getallhandler" class="tsd-kind-icon">get<wbr>All<wbr>Handler</a>
+								<a href="basecontroller.basecontroller-1.html#getallhandler" class="tsd-kind-icon">get<wbr>All<wbr>Handler</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="my_module.basecontroller.html#updateonehandler" class="tsd-kind-icon">update<wbr>One<wbr>Handler</a>
+								<a href="basecontroller.basecontroller-1.html#updateonehandler" class="tsd-kind-icon">update<wbr>One<wbr>Handler</a>
 							</li>
 						</ul>
 					</li>
@@ -310,8 +412,12 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>

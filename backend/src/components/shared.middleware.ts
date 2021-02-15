@@ -1,5 +1,16 @@
+// shared.middleware.ts
+/**
+ * This is the doc comment for shared.middleware.ts
+ * @packageDocumentation
+ * @module sharedMiddleware
+ */
+
 import {RequestExtInterface} from "../http/interfaces/requestExt.interface";
 import { Response, NextFunction } from 'express';
+
+/**
+ * Function to adjustment the query params before of the send to the getAll routes in components
+ */
 
 function queryParamsMiddlewareValidation() {
   return async (req: RequestExtInterface, res: Response, next: NextFunction) => {

@@ -1,4 +1,22 @@
 {
-    "entryPoints": ["./src/app.ts", "./src/http/controller/base.controller.ts"],
+    "entryPoints": [
+        "./src/app.ts", 
+        "./src/http/controller/base.controller.ts", 
+        "./src/http/service/base.service.ts", 
+        "./src/http/repository/base.repository.ts",
+        "./src/components/categories/category.controller.ts",
+        "./src/components/categories/category.service.ts",
+        "./src/components/categories/category.repository.ts",
+        "./src/components/expenses/expense.controller.ts",
+        "./src/components/expenses/expense.service.ts",
+        "./src/components/expenses/expense.repository.ts",
+        "./src/components/shared.middleware.ts",
+        "./src/http/functions/base.functions.ts",
+        "./src/http/middlewares/error.middleware.ts",
+        "./src/http/middlewares/not-found.middleware.ts",
+        "./src/http/responses.ts",
+        "./src/server/db.ts"
+        
+    ],
     "out": "doc"
 }
