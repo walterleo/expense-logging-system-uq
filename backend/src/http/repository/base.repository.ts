@@ -28,7 +28,7 @@ abstract class BaseRepository<T> {
     }
 
     async updateOne({ payload, id }: { payload: T, id: String }) {
-      return this.model.updateOne({ _id: id }, { $set: payload }, { new: true });
+      return this.model.findOneAndUpdate({ _id: id }, { $set: payload }, { new: true });
     }
 
     async deleteOne(query: DeleteOne) {

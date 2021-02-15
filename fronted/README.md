@@ -27,12 +27,12 @@ npm run test:unit
 npm run lint
 ```
 
-### Lints and fixes files
+### Run docs server
 ```
-npm run lint
+npm run doc:dev
 ```
 
-### Lints and fixes files
+### Build docs
 ```
-npm run lint
+npm run doc:build
 ```

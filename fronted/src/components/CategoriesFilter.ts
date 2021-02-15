@@ -15,7 +15,7 @@ export default Vue.extend({
       label="name"
       placeholder="Select category or create new"
       :multiple="false"
-      :closeOnSelect="!agGridFloatingFilter"
+      :closeOnSelect="false"
       :options="options"
       :filterable="false"
       :appendToBody="agGridFloatingFilter"
@@ -124,7 +124,7 @@ export default Vue.extend({
       <edit-category
         :payload="selectedCategoryLocal"
         @close="activeModelEdit=false"
-        @saved="categorySaved()"/>
+        @saved="categoryUpdated"/>
     </b-modal>
     </div>`,
   components: {
@@ -233,7 +233,8 @@ export default Vue.extend({
       });
       this.makeSearch(true);
     },
-    async categorySaved() {
+    async categoryUpdated(category: CategoryInterface) {
+      this.selectedCategoryLocal = category;
       this.activeModelEdit = false;
       this.makeSearch(true);
       this.$store.commit('categoriesUpdated');

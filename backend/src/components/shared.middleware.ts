@@ -1,18 +1,23 @@
+import {RequestExtInterface} from "../http/interfaces/requestExt.interface";
+import { Response, NextFunction } from 'express';
+
 function queryParamsMiddlewareValidation() {
-  return async (req, res, next) => {
+  return async (req: RequestExtInterface, res: Response, next: NextFunction) => {
     const {
       limit, skip, filters, sortBy,
     } = req.query;
 
-    req.query.limit = Number(limit) || 0;
-    req.query.skip = Number(skip) || 0;
+    req.queryParamsParsed = {};
+
+    req.queryParamsParsed.limit = Number(limit) || 0;
+    req.queryParamsParsed.skip = Number(skip) || 0;
 
     try {
-      req.query.filters = typeof filters === 'string'
+      req.queryParamsParsed.filters = typeof filters === 'string'
         ? JSON.parse(filters)
         : filters || {};
     } catch (e) {
-      req.query.filters = {};
+      req.queryParamsParsed.filters = {};
     }
 
     try {
@@ -26,9 +31,9 @@ function queryParamsMiddlewareValidation() {
           : sortByArray[i];
       }
 
-      req.query.sortBy = sortByArray;
+      req.queryParamsParsed.sortBy = sortByArray;
     } catch (e) {
-      req.query.sortBy = [];
+      req.queryParamsParsed.sortBy = [];
     }
 
     next();
