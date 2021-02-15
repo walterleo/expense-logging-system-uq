@@ -2,6 +2,7 @@ import { Request } from 'express';
 import BaseService from '../service/base.service';
 
 import * as baseFunctions from '../functions/base.functions';
+import {RequestExtInterface} from "../interfaces/requestExt.interface";
 
 abstract class BaseController<T> {
     protected service: BaseService<T>;
@@ -10,17 +11,17 @@ abstract class BaseController<T> {
       this.service = service;
     }
 
-    async getAllHandler(req: Request) {
+    async getAllHandler(req: RequestExtInterface) {
       const {
         limit, skip, filters, sortBy,
-      } = req.query;
+      } = req.queryParamsParsed;
 
       const queryFind = baseFunctions.getFiltersForQueryFind(filters);
 
       const fieldSort = baseFunctions.getFieldSort(sortBy);
 
       return this.service.getAll({
-        queryFind, skip, limit, fieldSort,
+        queryFind, skip: skip as number, limit: limit as number, fieldSort,
       });
     }
 
