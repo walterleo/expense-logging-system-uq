@@ -163,14 +163,7 @@ function getFiltersForQueryFind(filters) {
     const objectField = filters[field];
 
     if (!objectField.operator) {
-      const fieldKey = `${field}._id`;
-
-      // eslint-disable-next-line no-underscore-dangle
-      if (objectField.filterType === 'categories') {
-        objectFiltersField[fieldKey] = getObjectFind(objectField);
-      } else {
-        objectFiltersField[field] = getObjectFind(objectField);
-      }
+      objectFiltersField[field] = getObjectFind(objectField);
     } else if (objectField.operator) {
       const objectFilter = {};
       const orArrayConditions = [];
