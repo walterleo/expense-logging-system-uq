@@ -27,3 +27,9 @@ npm run dev
 ```
 npm run prod
 ```
+
+### Build documentation
+```
+npm run typedoc
+
+```
