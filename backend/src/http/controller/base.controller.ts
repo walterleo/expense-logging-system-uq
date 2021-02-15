@@ -23,9 +23,10 @@ abstract class BaseController<T> {
     }
 
     async getAllHandler(req: RequestExtInterface) {
-      const {
-        limit, skip, filters, sortBy,
-      } = req.queryParamsParsed;
+        const limit = req.queryParamsParsed?.limit;
+        const skip = req.queryParamsParsed?.skip;
+        const filters = req.queryParamsParsed?.filters;
+        const sortBy = req.queryParamsParsed?.sortBy;
 
       const queryFind = baseFunctions.getFiltersForQueryFind(filters);
 
