@@ -171,15 +171,15 @@ export default Vue.extend({
     };
   },
   computed: {
-    hasNextPage() {
+    hasNextPage(): boolean {
       const nextOffset = this.offset + this.paginationPageSize;
       return this.count > nextOffset;
     },
-    hasPrevPage() {
+    hasPrevPage(): boolean {
       const prevOffset = this.offset - this.paginationPageSize;
       return prevOffset >= 0;
     },
-    filter() {
+    filter(): object {
       return !this.isSearchActive ? {} : {
         name: {
           filterType: 'text',
@@ -265,6 +265,8 @@ export default Vue.extend({
       this.$store.commit('categoriesUpdated');
     },
     clearSearch() {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
       this.$refs.vSelect.search = '';
     },
     selectedCategoryChanged() {
@@ -287,18 +289,30 @@ export default Vue.extend({
       }
     },
     applyFilter() {
-      if (this.params) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
+      const { params } = this;
+
+      if (params) {
         this.filterIsApplied = true;
-        this.params.parentFilterInstance((instance) => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+        // @ts-ignore
+        params.parentFilterInstance((instance) => {
           instance.onFloatingFilterChanged('equals', this.selectedCategoryLocal.id);
         });
       }
     },
     resetFilter() {
-      if (this.params) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
+      const { params } = this;
+
+      if (params) {
         this.selectedCategoryLocal = null;
         this.lastSelectedCategory = null;
-        this.params.parentFilterInstance((instance) => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+        // @ts-ignore
+        params.parentFilterInstance((instance) => {
           instance.onFloatingFilterChanged(null, null);
         });
       }

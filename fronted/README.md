@@ -26,3 +26,13 @@ npm run test:unit
 ```
 npm run lint
 ```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Lints and fixes files
+```
+npm run lint
+```

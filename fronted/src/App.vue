@@ -80,7 +80,10 @@ import Loading from 'vue-loading-overlay';
 import { Operation } from '@/enums';
 import ExpenseInterface from '@/interfaces/expense.interface.';
 import ExpensesByCategoryInterface from '@/interfaces/expensesByCategory.interface';
+import { ApexOptions } from 'apexcharts';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 @Component({
   components: {
     AgGridVue,
@@ -187,7 +190,7 @@ export default class App extends Vue {
 
   chartSeries: number[] = [];
 
-  chartOptions = {
+  chartOptions: ApexOptions = {
     labels: [],
     responsive: [{
       breakpoint: 480,

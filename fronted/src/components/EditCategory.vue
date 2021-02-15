@@ -15,10 +15,8 @@
       </div>
 
       <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          @click.prevent="$emit('close')">Close</button>
+        <button @click.prevent="$emit('close')"
+          type="button" class="btn btn-secondary" >Close</button>
         <button
           type="button"
           class="btn btn-primary"
@@ -41,6 +39,8 @@ import { Operation } from '@/enums';
 import CategoryInterface from '@/interfaces/category.interface';
 import CategoryService from '../services/category.service';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 @Component({
   name: 'EditCategory',
   components: {

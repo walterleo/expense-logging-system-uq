@@ -30,6 +30,8 @@ import {
 })
 export default class CellRendererActions extends Vue {
   edit() {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
     this.params.context.componentParent.editExpensive(this.params.node.data);
   }
 
@@ -52,12 +54,9 @@ export default class CellRendererActions extends Vue {
   }
 
   async delete() {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
     await this.params.context.componentParent.deleteExpense(this.params.node.data.id);
   }
 }
-
 </script>
-
-<style scoped>
-
-</style>

@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "doc:dev": "vue-cli-service styleguidist",
+    "doc:build": "vue-cli-service styleguidist:build"
   },
   "dependencies": {
     "ag-grid-community": "^24.1.0",
@@ -48,6 +50,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
+    "vue-cli-plugin-styleguidist": "~4.35.0",
     "vue-template-compiler": "^2.6.12"
   }
 }

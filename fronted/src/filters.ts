@@ -2,7 +2,7 @@ import Vue from 'vue';
 import moment from 'moment';
 
 Vue.filter('date',
-  (value,
+  (value: string | number | Date,
     wordFormat = true,
     fullDate = true,
     timeDate = true,
@@ -30,4 +30,4 @@ Vue.filter('date',
     return moment(date).format(format);
   });
 
-Vue.filter('dollar', (value) => `$${Number(value).toFixed(2)}`);
+Vue.filter('dollar', (value: string | number) => `$${Number(value).toFixed(2)}`);

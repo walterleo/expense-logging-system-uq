@@ -64,8 +64,10 @@ import ExpenseService from '@/services/expense.service';
 import Loading from 'vue-loading-overlay';
 import CategoriesFilter from '@/components/CategoriesFilter';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 @Component({
-  name: 'CreateOrEditExpenseModal',
+  name: 'CreateOrEditExpense',
   components: {
     vSelect,
     Loading,
