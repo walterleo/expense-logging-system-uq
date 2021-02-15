@@ -65,13 +65,13 @@ export default class EditCategory extends Vue {
   created() {
     this.model = {
       id: this.payload?.id,
-      name: this.payload.name,
+      name: this.payload?.name || '',
     };
   }
 
   async saveCategory() {
     this.isLoading = true;
-    await this.categoryService.edit(this.model.id, this.model);
+    await this.categoryService.edit(this.model?.id || '', this.model as CategoryInterface);
     this.$emit('saved');
     this.isLoading = false;
   }

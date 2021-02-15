@@ -108,7 +108,7 @@ export default class App extends Vue {
         alwaysShowBothConditions: false,
       },
       sort: 'desc',
-      valueFormatter: (params) => this.$options.filters.date(params.value),
+      valueFormatter: (params) => this.$options.filters?.date(params.value),
     },
     {
       colId: 'amount',
@@ -121,7 +121,7 @@ export default class App extends Vue {
       },
       minWidth: 100,
       maxWidth: 400,
-      valueFormatter: (params) => this.$options.filters.dollar(params.value),
+      valueFormatter: (params) => this.$options.filters?.dollar(params.value),
     },
     {
       colId: 'categoryId',
@@ -233,9 +233,10 @@ export default class App extends Vue {
 
   @Watch('categoriesUpdateFlag')
   async OnCategoriesChanged() {
-    debugger;
-    this.gridApi.setDatasource(this.dataSource);
-    await this.fetchExpensesByCategories();
+    if (this.gridApi) {
+      this.gridApi.setDatasource(this.dataSource);
+      await this.fetchExpensesByCategories();
+    }
   }
 
   created() {
@@ -296,17 +297,21 @@ export default class App extends Vue {
   }
 
   async deleteExpense(id: string) {
-    this.isLoading = true;
-    await this.expenseService.delete(id);
-    this.gridApi.setDatasource(this.dataSource);
-    this.isLoading = false;
-    await this.fetchExpensesByCategories();
+    if (this.gridApi) {
+      this.isLoading = true;
+      await this.expenseService.delete(id);
+      this.gridApi.setDatasource(this.dataSource);
+      this.isLoading = false;
+      await this.fetchExpensesByCategories();
+    }
   }
 
   async expenseSaved() {
-    this.activeModalCreateOrEdit = false;
-    this.gridApi.setDatasource(this.dataSource);
-    await this.fetchExpensesByCategories();
+    if (this.gridApi) {
+      this.activeModalCreateOrEdit = false;
+      this.gridApi.setDatasource(this.dataSource);
+      await this.fetchExpensesByCategories();
+    }
   }
 }
 </script>

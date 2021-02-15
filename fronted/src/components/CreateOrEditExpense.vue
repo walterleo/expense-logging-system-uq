@@ -92,7 +92,7 @@ export default class CreateOrEditExpenseModal extends Vue {
   @Watch('selectedCategory')
   onChildChanged(val: CategoryInterface) {
     if (this.model) {
-      this.model.categoryId = val?.id;
+      this.model.categoryId = val?.id as string;
     }
   }
 
@@ -109,7 +109,7 @@ export default class CreateOrEditExpenseModal extends Vue {
         amount: this.payload.amount,
         description: this.payload.description,
       };
-      this.selectedCategory = this.payload.category;
+      this.selectedCategory = this.payload.category || null;
     }
   }
 
@@ -118,8 +118,8 @@ export default class CreateOrEditExpenseModal extends Vue {
 
     if (this.operation === Operation.Create) {
       await this.expenseService.create(this.model as ExpenseInterface);
-    } else {
-      await this.expenseService.edit(this.payload.id, this.model);
+    } else if (this.payload && this.model) {
+      await this.expenseService.edit(this.payload.id as string, this.model);
     }
 
     this.$emit('saved');
