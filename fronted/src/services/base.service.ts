@@ -23,7 +23,7 @@ export default abstract class BaseService<T> {
     return resp.data;
   }
 
-  async edit(id: string, payload: T): Promise<T> {
+  async edit(id: string, payload: T) {
     const resp = await appService.put(`${this.baseUrl}/${id}`, payload);
     return resp.data;
   }

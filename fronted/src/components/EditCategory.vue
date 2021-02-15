@@ -18,6 +18,7 @@
         <button @click.prevent="$emit('close')"
           type="button" class="btn btn-secondary" >Close</button>
         <button
+          id="saveButton"
           type="button"
           class="btn btn-primary"
           :disabled="!isValidModelToSave"
@@ -58,8 +59,8 @@ export default class EditCategory extends Vue {
 
   isLoading = false;
 
-  get isValidModelToSave() {
-    return this.model && this.model.name;
+  public get isValidModelToSave(): boolean {
+    return !!this.model && !!this.model.name && !!this.model.id;
   }
 
   created() {
