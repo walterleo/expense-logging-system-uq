@@ -1,7 +1,5 @@
 # fronted
 
-### First check the .env.example and create your .env
-
 ##  Project setup with docker
 You need to have docker with docker-compose installed
 ### Compiles and hot-reloads for development

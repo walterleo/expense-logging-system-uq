@@ -20,7 +20,7 @@ const PORT = encodeURIComponent(config.dbPort);
  */
 async function connect() {
   const AUTH = USER && PASSWORD ? `${USER}:${PASSWORD}@` : '';
-  const url = `mongodb://${AUTH}${config.dbHost}:${PORT}/${config.dbName}`;
+  const url = process.env.MONGO_URL || `mongodb://${AUTH}${config.dbHost}:${PORT}/${config.dbName}`;
 
   try {
     console.log('db connection url', url);
