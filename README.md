@@ -65,7 +65,6 @@ npm install
 ```
 
 
-
 ### Compiles and hot-reloads for development
 ```
 npm run dev
@@ -74,4 +73,10 @@ npm run dev
 ### Compiles for production
 ```
 npm run prod
+```
+
+### Build documentation
+```
+npm run typedoc
+
 ```
