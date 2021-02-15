@@ -7,9 +7,7 @@ import CategoryInterface from '@/interfaces/category.interface';
 export default Vue.extend({
   name: 'CategoriesFilter',
   template: `
-    <div
-      id="tags-drop-down-filter-wrapper"
-      style="width: 100%; display: flex; align-items: center;background: white;">
+    <div style="width: 100%; display: flex; align-items: center;background: white;">
     <v-select
       ref="vSelect"
       v-model="selectedCategoryLocal"
@@ -36,14 +34,14 @@ export default Vue.extend({
               <div class="vue-select-pagination">
                 <button
                   type="button"
-                  class="btn btn-primary btn-sm mx-1"
+                  class="btn btn-primary btn-sm mr-1"
                   :disabled="!isSearchActive"
                   @click="makeSearch(true)">
-                  Unsearch
+                  Clear
                 </button>
                 <button
                   type="button"
-                  class="btn btn-primary btn-sm mx-1"
+                  class="btn btn-primary btn-sm ml-1"
                   :disabled="search.length === 0"
                   @click="makeSearch()">
                   Search
@@ -51,23 +49,6 @@ export default Vue.extend({
               </div>
             </div>
           <hr class="my-1">
-          <div v-if="agGridFloatingFilter">
-            <div class="vue-select-pagination py-0">
-              <button
-                type="button"
-                class="btn btn-outline-primary btn-sm mx-1"
-                @click="resetFilter">
-                Reset
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-primary btn-sm mx-1"
-                @click="applyFilter">
-                Apply
-              </button>
-            </div>
-            <hr class="my-1">
-          </div>
         </li>
       </template>
       <template #option="{ name }">
@@ -78,14 +59,6 @@ export default Vue.extend({
       </template>
       <template #no-options="{ search, searching, loading }">
         Not found
-        <template v-show="search && search.length > 0">
-          -
-          <a
-            href="#"
-            @click.prevent="addCategory">
-            Create
-          </a>
-        </template>
       </template>
       <template #list-footer>
         <hr class="my-1">
@@ -104,6 +77,23 @@ export default Vue.extend({
             @click="nextPage()">
             Next
           </button>
+        </div>
+        <div v-if="agGridFloatingFilter">
+          <hr class="my-1">
+          <div class="d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn btn-outline-primary btn-sm mx-1"
+              @click="resetFilter">
+              Reset
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary btn-sm mx-1"
+              @click="applyFilter">
+              Apply
+            </button>
+          </div>
         </div>
         <template v-if="selectedCategoryLocal || $refs.vSelect.search.length > 0">
           <hr class="my-1">
@@ -269,6 +259,8 @@ export default Vue.extend({
     },
     async deleteCategory(id: string) {
       await this.categoriesService.delete(id);
+      this.selectedCategoryLocal = null;
+      this.selectedCategoryChanged();
       this.makeSearch(true);
       this.$store.commit('categoriesUpdated');
     },
