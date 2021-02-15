@@ -15,7 +15,7 @@ export default Vue.extend({
       label="name"
       placeholder="Select category or create new"
       :multiple="false"
-      :closeOnSelect="false"
+      :closeOnSelect="!agGridFloatingFilter"
       :options="options"
       :filterable="false"
       :appendToBody="agGridFloatingFilter"
@@ -188,12 +188,24 @@ export default Vue.extend({
         },
       };
     },
+    categoriesUpdateFlag(): number {
+      return this.$store.state.categoriesUpdateFlag;
+    },
+    categoryCreatedFlag(): number {
+      return this.$store.state.categoryCreatedFlag;
+    },
   },
   watch: {
     selectedCategoryLocal(newVal, oldVal) {
       if (!newVal && oldVal) {
         this.resetFilter();
       }
+    },
+    categoriesUpdateFlag() {
+      this.makeSearch(true);
+    },
+    categoryCreatedFlag() {
+      this.makeSearch(true);
     },
   },
   created() {
@@ -231,12 +243,11 @@ export default Vue.extend({
       await this.categoriesService.create({
         name: this.search as string,
       });
-      this.makeSearch(true);
+      this.$store.commit('categoryCreatedFlag');
     },
     async categoryUpdated(category: CategoryInterface) {
       this.selectedCategoryLocal = category;
       this.activeModelEdit = false;
-      this.makeSearch(true);
       this.$store.commit('categoriesUpdated');
     },
     confirmDelete(category: CategoryInterface) {

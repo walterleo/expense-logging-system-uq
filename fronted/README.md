@@ -1,11 +1,18 @@
 # fronted
 
-## Project setup
+### First check the .env.example and create your .env
+
+##  Project setup with docker
+You need to have docker with docker-compose installed
+### Compiles and hot-reloads for development
+```
+docker-compose up --build
+```
+
+## Project setup locally
 ```
 npm install
 ```
-
-### Check .env.example and create your .env
 
 ### Compiles and hot-reloads for development
 ```
@@ -27,12 +34,12 @@ npm run test:unit
 npm run lint
 ```
 
-### Run docs server
+### Run server to view documentation
 ```
 npm run doc:dev
 ```
 
-### Build docs
+### Build documentation
 ```
 npm run doc:build
 ```
